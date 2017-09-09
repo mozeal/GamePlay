@@ -326,14 +326,14 @@ void MeshBatch::draw()
             if (!_indexed)
             {
                 GL_ASSERT( glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0) );
-                GL_ASSERT( glDrawArrays(_mesh->getPrimitiveType(), 0, _mesh->getVertexCount()) );
+                GL_ASSERT( glDrawArrays(_mesh->getPrimitiveType(), 0, _vertexCount) );
             }
             else
             {
                 MeshPart* part = _mesh->getPart(0);
                 GP_ASSERT(part);
                 GL_ASSERT( glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, part->getIndexBuffer()) );
-                GL_ASSERT( glDrawElements(part->getPrimitiveType(), part->getIndexCount(), part->getIndexFormat(), 0) );
+                GL_ASSERT( glDrawElements(part->getPrimitiveType(), _indexCount, part->getIndexFormat(), 0) );
             }
             
             pass->unbind();
