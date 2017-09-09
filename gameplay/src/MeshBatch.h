@@ -180,6 +180,9 @@ private:
     unsigned short* _indicesPtr;
     bool _started;
 
+#ifdef EMSCRIPTEN
+    Model * _model;
+#endif
 };
 
 }

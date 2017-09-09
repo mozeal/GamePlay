@@ -1,6 +1,18 @@
+/*
+    Copyright 2016 Andrew Karpushin (reven86@gmail.com).
+
+    This source file is a Derivative Work from orignal Gameplay3D source files.
+    The Gameplay3D project is distributed under the terms of Apache 2.0 License.
+    Original Gameplay3D source files can be found at https://github.com/gameplay3d/GamePlay
+
+    Changes to orginal document were done in lines: 3, 11, 16, 39, 118, 252.
+*/
+
 #include "Base.h"
 #include "MeshBatch.h"
 #include "Material.h"
+#include "Model.h"
+#include "MeshPart.h"
 
 namespace gameplay
 {
@@ -9,11 +21,28 @@ MeshBatch::MeshBatch(const VertexFormat& vertexFormat, Mesh::PrimitiveType primi
     : _vertexFormat(vertexFormat), _primitiveType(primitiveType), _material(material), _indexed(indexed), _capacity(0), _growSize(growSize),
     _vertexCapacity(0), _indexCapacity(0), _vertexCount(0), _indexCount(0), _vertices(NULL), _verticesPtr(NULL), _indices(NULL), _indicesPtr(NULL), _started(false)
 {
+#ifdef EMSCRIPTEN
+    Mesh *mesh = Mesh::createMesh(vertexFormat, initialCapacity, true);
+    if( indexed ) {
+        mesh->addPart(primitiveType, Mesh::INDEX16, initialCapacity);
+    }
+    _model = Model::create(mesh);
+    _model->getMesh()->release();
+    _model->setMaterial(material);
+
+#else
+    if( material ) {
+        material->addRef();
+    }
+#endif
     resize(initialCapacity);
 }
 
 MeshBatch::~MeshBatch()
 {
+#ifdef EMSCRIPTEN
+    SAFE_RELEASE(_model);
+#endif
     SAFE_RELEASE(_material);
     SAFE_DELETE_ARRAY(_vertices);
     SAFE_DELETE_ARRAY(_indices);
@@ -37,9 +66,6 @@ MeshBatch* MeshBatch::create(const VertexFormat& vertexFormat, Mesh::PrimitiveTy
     GP_ASSERT(material);
 
     MeshBatch* batch = new MeshBatch(vertexFormat, primitiveType, material, indexed, initialCapacity, growSize);
-
-    material->addRef();
-
     return batch;
 }
 
@@ -116,7 +142,11 @@ void MeshBatch::updateVertexAttributeBinding()
         {
             Pass* p = t->getPassByIndex(j);
             GP_ASSERT(p);
+#ifdef EMSCRIPTEN
+            VertexAttributeBinding* b = VertexAttributeBinding::create(_model->getMesh(), p->getEffect());
+#else
             VertexAttributeBinding* b = VertexAttributeBinding::create(_vertexFormat, _vertices, p->getEffect());
+#endif
             p->setVertexAttributeBinding(b);
             SAFE_RELEASE(b);
         }
@@ -238,6 +268,12 @@ bool MeshBatch::isStarted() const
 
 void MeshBatch::finish()
 {
+#ifdef EMSCRIPTEN
+    _model->getMesh()->setVertexData(reinterpret_cast<const float*>(_vertices), 0, _vertexCount);
+    if( _indexed ) {
+        _model->getMesh()->getPart(0)->setIndexData(_indices, 0, _indexCount );
+    }
+#endif
     _started = false;
 }
 
@@ -249,6 +285,11 @@ void MeshBatch::draw()
     // Not using VBOs, so unbind the element array buffer.
     // ARRAY_BUFFER will be unbound automatically during pass->bind().
     GL_ASSERT( glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0 ) );
+
+#ifdef EMSCRIPTEN
+    _model->draw();
+    return;
+#endif
 
     GP_ASSERT(_material);
     if (_indexed)

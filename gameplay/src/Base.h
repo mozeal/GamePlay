@@ -195,6 +195,9 @@ extern int strcmpnocase(const char* s1, const char* s2);
 #elif __APPLE__
     #include <OpenAL/al.h>
     #include <OpenAL/alc.h>
+#elif EMSCRIPTEN
+    #include <AL/al.h>
+    #include <AL/alc.h>
 #endif
 
 // Compressed Media
@@ -261,6 +264,21 @@ using std::va_list;
     #else
         #error "Unsupported Apple Device"
     #endif
+#elif EMSCRIPTEN
+    #include <EGL/egl.h>
+    #include <GLES2/gl2.h>
+    #include <GLES2/gl2ext.h>
+    #define GP_USE_VAO //for IE11
+    extern PFNGLBINDVERTEXARRAYOESPROC glBindVertexArray;
+    extern PFNGLDELETEVERTEXARRAYSOESPROC glDeleteVertexArrays;
+    extern PFNGLGENVERTEXARRAYSOESPROC glGenVertexArrays;
+    extern PFNGLISVERTEXARRAYOESPROC glIsVertexArray;
+    extern PFNGLMAPBUFFEROESPROC glMapBuffer;
+    extern PFNGLUNMAPBUFFEROESPROC glUnmapBuffer;
+    #define GL_WRITE_ONLY GL_WRITE_ONLY_OES
+    #define GL_DEPTH24_STENCIL8 GL_DEPTH24_STENCIL8_OES
+    #define glClearDepth glClearDepthf
+    #define OPENGL_ES
 #endif
 
 // Graphics (GLSL)

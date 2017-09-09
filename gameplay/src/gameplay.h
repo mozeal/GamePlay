@@ -111,3 +111,15 @@
 #include "AbsoluteLayout.h"
 #include "VerticalLayout.h"
 #include "FlowLayout.h"
+
+
+
+#ifndef __CHECK_GL__
+#define __CHECK_GL__
+inline void CHECK_GL() {
+    GLenum err;
+    if( (err = glGetError()) != GL_NO_ERROR ) {
+        printf( "OpenGL error: %i\n", err );
+    }
+}
+#endif //__CHECK_GL__
