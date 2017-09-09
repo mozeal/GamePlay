@@ -143,8 +143,6 @@
 		38791F9B1F6012FA00B3AF89 /* TriangleSample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38791F9A1F6012FA00B3AF89 /* TriangleSample.cpp */; };
 		38791FC01F6018AA00B3AF89 /* MeshPrimitiveSample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38791FA71F6018A700B3AF89 /* MeshPrimitiveSample.cpp */; };
 		38791FC61F6018AA00B3AF89 /* FontSample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38791FB81F6018A900B3AF89 /* FontSample.cpp */; };
-		38791FEA1F6019E700B3AF89 /* FirstPersonCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38791FE21F6019E700B3AF89 /* FirstPersonCamera.cpp */; };
-		38791FEB1F6019E700B3AF89 /* Grid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38791FE41F6019E700B3AF89 /* Grid.cpp */; };
 		38791FEC1F6019E700B3AF89 /* Sample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38791FE61F6019E700B3AF89 /* Sample.cpp */; };
 		38791FED1F6019E700B3AF89 /* SamplesGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38791FE81F6019E700B3AF89 /* SamplesGame.cpp */; };
 		42049B5816ADBB61005DD1F9 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42049B5216ADBB61005DD1F9 /* CoreMotion.framework */; };
@@ -422,10 +420,6 @@
 		38791FB11F6018A800B3AF89 /* MeshPrimitiveSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeshPrimitiveSample.h; sourceTree = "<group>"; };
 		38791FB21F6018A800B3AF89 /* FontSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontSample.h; sourceTree = "<group>"; };
 		38791FB81F6018A900B3AF89 /* FontSample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FontSample.cpp; sourceTree = "<group>"; };
-		38791FE21F6019E700B3AF89 /* FirstPersonCamera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FirstPersonCamera.cpp; sourceTree = "<group>"; };
-		38791FE31F6019E700B3AF89 /* FirstPersonCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstPersonCamera.h; sourceTree = "<group>"; };
-		38791FE41F6019E700B3AF89 /* Grid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Grid.cpp; sourceTree = "<group>"; };
-		38791FE51F6019E700B3AF89 /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
 		38791FE61F6019E700B3AF89 /* Sample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sample.cpp; sourceTree = "<group>"; };
 		38791FE71F6019E700B3AF89 /* Sample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sample.h; sourceTree = "<group>"; };
 		38791FE81F6019E700B3AF89 /* SamplesGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SamplesGame.cpp; sourceTree = "<group>"; };
@@ -440,16 +434,16 @@
 		421090F91829A5AE00761E40 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		421090FB1829A5BF00761E40 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
 		424CC03B161FCBDD00577827 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
-		42C932BC1491A0DB0098216A /* Test-macosx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Test-macosx.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		42C932BC1491A0DB0098216A /* Browser-macosx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Browser-macosx.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42C932C01491A0DB0098216A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		42C932ED1491A4CB0098216A /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		42C932F21491A53E0098216A /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		42C933161491A5EB0098216A /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		42C9331C1491A6750098216A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		42C9331E1491A67F0098216A /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
-		5B61611214CCC2200073B857 /* Test-macosx.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Test-macosx.plist"; sourceTree = "<group>"; };
-		5B61612C14CCC24C0073B857 /* Test-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Test-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B61612E14CCC24D0073B857 /* Test-ios.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Test-ios.plist"; sourceTree = "<group>"; };
+		5B61611214CCC2200073B857 /* Browser-macosx.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Browser-macosx.plist"; sourceTree = "<group>"; };
+		5B61612C14CCC24C0073B857 /* Browser-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Browser-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B61612E14CCC24D0073B857 /* Browser-ios.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Browser-ios.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -741,10 +735,6 @@
 		38791FE11F6019E700B3AF89 /* common */ = {
 			isa = PBXGroup;
 			children = (
-				38791FE21F6019E700B3AF89 /* FirstPersonCamera.cpp */,
-				38791FE31F6019E700B3AF89 /* FirstPersonCamera.h */,
-				38791FE41F6019E700B3AF89 /* Grid.cpp */,
-				38791FE51F6019E700B3AF89 /* Grid.h */,
 				38791FE61F6019E700B3AF89 /* Sample.cpp */,
 				38791FE71F6019E700B3AF89 /* Sample.h */,
 				38791FE81F6019E700B3AF89 /* SamplesGame.cpp */,
@@ -758,8 +748,8 @@
 			children = (
 				38485B231F5FD87D0045104A /* GamePlay */,
 				42049B7C16ADBCDB005DD1F9 /* Default-568h@2x.png */,
-				5B61611214CCC2200073B857 /* Test-macosx.plist */,
-				5B61612E14CCC24D0073B857 /* Test-ios.plist */,
+				5B61611214CCC2200073B857 /* Browser-macosx.plist */,
+				5B61612E14CCC24D0073B857 /* Browser-ios.plist */,
 				42C932ED1491A4CB0098216A /* icon.png */,
 				42C932F21491A53E0098216A /* res */,
 				42C932C61491A0DB0098216A /* src */,
@@ -771,8 +761,8 @@
 		42C932BD1491A0DB0098216A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				42C932BC1491A0DB0098216A /* Test-macosx.app */,
-				5B61612C14CCC24C0073B857 /* Test-ios.app */,
+				42C932BC1491A0DB0098216A /* Browser-macosx.app */,
+				5B61612C14CCC24C0073B857 /* Browser-ios.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -832,9 +822,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		42C932BB1491A0DB0098216A /* Test-macosx */ = {
+		42C932BB1491A0DB0098216A /* Browser-macosx */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 42C932DA1491A0DB0098216A /* Build configuration list for PBXNativeTarget "Test-macosx" */;
+			buildConfigurationList = 42C932DA1491A0DB0098216A /* Build configuration list for PBXNativeTarget "Browser-macosx" */;
 			buildPhases = (
 				42C932B81491A0DB0098216A /* Sources */,
 				42C932B91491A0DB0098216A /* Frameworks */,
@@ -845,14 +835,14 @@
 			);
 			dependencies = (
 			);
-			name = "Test-macosx";
+			name = "Browser-macosx";
 			productName = Test;
-			productReference = 42C932BC1491A0DB0098216A /* Test-macosx.app */;
+			productReference = 42C932BC1491A0DB0098216A /* Browser-macosx.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5B61611414CCC24C0073B857 /* Test-ios */ = {
+		5B61611414CCC24C0073B857 /* Browser-ios */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5B61612914CCC24C0073B857 /* Build configuration list for PBXNativeTarget "Test-ios" */;
+			buildConfigurationList = 5B61612914CCC24C0073B857 /* Build configuration list for PBXNativeTarget "Browser-ios" */;
 			buildPhases = (
 				5B61611514CCC24C0073B857 /* Sources */,
 				5B61611714CCC24C0073B857 /* Frameworks */,
@@ -863,9 +853,9 @@
 			);
 			dependencies = (
 			);
-			name = "Test-ios";
+			name = "Browser-ios";
 			productName = Test;
-			productReference = 5B61612C14CCC24C0073B857 /* Test-ios.app */;
+			productReference = 5B61612C14CCC24C0073B857 /* Browser-ios.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -876,7 +866,7 @@
 			attributes = {
 				LastUpgradeCheck = 0600;
 			};
-			buildConfigurationList = 42C932B61491A0DB0098216A /* Build configuration list for PBXProject "Test" */;
+			buildConfigurationList = 42C932B61491A0DB0098216A /* Build configuration list for PBXProject "Browser" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -888,8 +878,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				42C932BB1491A0DB0098216A /* Test-macosx */,
-				5B61611414CCC24C0073B857 /* Test-ios */,
+				42C932BB1491A0DB0098216A /* Browser-macosx */,
+				5B61611414CCC24C0073B857 /* Browser-ios */,
 			);
 		};
 /* End PBXProject section */
@@ -975,7 +965,6 @@
 				38485D581F5FD8B60045104A /* Frustum.cpp in Sources */,
 				38485DB01F5FD8B60045104A /* ThemeStyle.cpp in Sources */,
 				38485DA01F5FD8B60045104A /* Animation.cpp in Sources */,
-				38791FEA1F6019E700B3AF89 /* FirstPersonCamera.cpp in Sources */,
 				38485D4A1F5FD8B60045104A /* AIMessage.cpp in Sources */,
 				38485DB31F5FD8B60045104A /* ImageControl.cpp in Sources */,
 				38485DA61F5FD8B60045104A /* Effect.cpp in Sources */,
@@ -1029,7 +1018,6 @@
 				38485D811F5FD8B60045104A /* Rectangle.cpp in Sources */,
 				38485D411F5FD8B60045104A /* BoundingSphere.cpp in Sources */,
 				38485D841F5FD8B60045104A /* Ray.cpp in Sources */,
-				38791FEB1F6019E700B3AF89 /* Grid.cpp in Sources */,
 				38485DB51F5FD8B60045104A /* Logger.cpp in Sources */,
 				38485D631F5FD8B60045104A /* PhysicsRigidBody.cpp in Sources */,
 				38485D8B1F5FD8B60045104A /* Quaternion.cpp in Sources */,
@@ -1196,7 +1184,7 @@
 					../../gameplay/src,
 					"../../external-deps/include",
 				);
-				INFOPLIST_FILE = "Test-macosx.plist";
+				INFOPLIST_FILE = "Browser-macosx.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"../../external-deps/lib/macosx/x86_64",
@@ -1223,7 +1211,7 @@
 					../../gameplay/src,
 					"../../external-deps/include",
 				);
-				INFOPLIST_FILE = "Test-macosx.plist";
+				INFOPLIST_FILE = "Browser-macosx.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"../../external-deps/lib/macosx/x86_64",
@@ -1249,11 +1237,12 @@
 					"\"../../gameplay/src\"",
 					"../../external-deps/include",
 				);
-				INFOPLIST_FILE = "Test-ios.plist";
+				INFOPLIST_FILE = "Browser-ios.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				"OTHER_LDFLAGS[sdk=iphoneos*]" = "-L../../external-deps/lib/ios/arm";
 				"OTHER_LDFLAGS[sdk=iphonesimulator*]" = "-L../../external-deps/lib/ios/x86";
+				PRODUCT_NAME = "Browser-ios";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -1275,9 +1264,10 @@
 					"\"../../gameplay/src\"",
 					"../../external-deps/include",
 				);
-				INFOPLIST_FILE = "Test-ios.plist";
+				INFOPLIST_FILE = "Browser-ios.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = "Browser-ios";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -1289,7 +1279,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		42C932B61491A0DB0098216A /* Build configuration list for PBXProject "Test" */ = {
+		42C932B61491A0DB0098216A /* Build configuration list for PBXProject "Browser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				42C932D81491A0DB0098216A /* Debug */,
@@ -1298,7 +1288,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		42C932DA1491A0DB0098216A /* Build configuration list for PBXNativeTarget "Test-macosx" */ = {
+		42C932DA1491A0DB0098216A /* Build configuration list for PBXNativeTarget "Browser-macosx" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				42C932DB1491A0DB0098216A /* Debug */,
@@ -1307,7 +1297,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5B61612914CCC24C0073B857 /* Build configuration list for PBXNativeTarget "Test-ios" */ = {
+		5B61612914CCC24C0073B857 /* Build configuration list for PBXNativeTarget "Browser-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5B61612A14CCC24C0073B857 /* Debug */,
