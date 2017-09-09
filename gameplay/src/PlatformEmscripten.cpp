@@ -97,8 +97,8 @@ PFNGLBINDVERTEXARRAYOESPROC glBindVertexArray = NULL;
 PFNGLDELETEVERTEXARRAYSOESPROC glDeleteVertexArrays = NULL;
 PFNGLGENVERTEXARRAYSOESPROC glGenVertexArrays = NULL;
 PFNGLISVERTEXARRAYOESPROC glIsVertexArray = NULL;
-PFNGLMAPBUFFEROESPROC glMapBuffer = NULL;
-PFNGLUNMAPBUFFEROESPROC glUnmapBuffer = NULL;
+//PFNGLMAPBUFFEROESPROC glMapBuffer = NULL;
+//PFNGLUNMAPBUFFEROESPROC glUnmapBuffer = NULL;
 static int __windowSize[2];
 static list<ConnectedGamepadDevInfo> __connectedGamepads;
 
@@ -771,15 +771,15 @@ namespace gameplay
             glDeleteVertexArrays = (PFNGLDELETEVERTEXARRAYSOESPROC)eglGetProcAddress("glDeleteVertexArraysOES");
             glGenVertexArrays = (PFNGLGENVERTEXARRAYSOESPROC)eglGetProcAddress("glGenVertexArraysOES");
             glIsVertexArray = (PFNGLISVERTEXARRAYOESPROC)eglGetProcAddress("glIsVertexArrayOES");
-            glMapBuffer = (PFNGLMAPBUFFEROESPROC)eglGetProcAddress("glMapBuffer");
-            glUnmapBuffer = (PFNGLUNMAPBUFFEROESPROC)eglGetProcAddress("glUnmapBuffer");
+            //glMapBuffer = (PFNGLMAPBUFFEROESPROC)eglGetProcAddress("glMapBuffer");
+            //glUnmapBuffer = (PFNGLUNMAPBUFFEROESPROC)eglGetProcAddress("glUnmapBuffer");
         }
         GP_ASSERT(glBindVertexArray);
         GP_ASSERT(glDeleteVertexArrays);
         GP_ASSERT(glGenVertexArrays);
         GP_ASSERT(glIsVertexArray);
-        GP_ASSERT(glMapBuffer);
-        GP_ASSERT(glUnmapBuffer);
+        //GP_ASSERT(glMapBuffer);
+        //GP_ASSERT(glUnmapBuffer);
 
         // Set vsync.
         eglSwapInterval(__eglDisplay, WINDOW_VSYNC ? 1 : 0);

@@ -22,9 +22,9 @@ MeshBatch::MeshBatch(const VertexFormat& vertexFormat, Mesh::PrimitiveType primi
     _vertexCapacity(0), _indexCapacity(0), _vertexCount(0), _indexCount(0), _vertices(NULL), _verticesPtr(NULL), _indices(NULL), _indicesPtr(NULL), _started(false)
 {
 #ifdef EMSCRIPTEN
-    Mesh *mesh = Mesh::createMesh(vertexFormat, initialCapacity, true);
+    Mesh *mesh = Mesh::createMesh(vertexFormat, initialCapacity*20, true);
     if( indexed ) {
-        mesh->addPart(primitiveType, Mesh::INDEX16, initialCapacity);
+        mesh->addPart(primitiveType, Mesh::INDEX16, initialCapacity*20);
     }
     _model = Model::create(mesh);
     _model->getMesh()->release();
@@ -109,16 +109,24 @@ void MeshBatch::add(const void* vertices, size_t size, unsigned int vertexCount,
             {
                 // Create a degenerate triangle to connect separate triangle strips
                 // by duplicating the previous and next vertices.
-                _indicesPtr[0] = *(_indicesPtr-1);
-                _indicesPtr[1] = _vertexCount;
-                _indicesPtr += 2;
+                //_indicesPtr[0] = *(_indicesPtr-1);
+                //_indicesPtr[1] = _vertexCount;
+                //_indicesPtr += 2;
+                _indicesPtr[0] = indices[0] + _vertexCount;
+                _indicesPtr += 1;
             }
             
             // Loop through all indices and insert them, with their values offset by
             // 'vertexCount' so that they are relative to the first newly inserted vertex.
-            for (unsigned int i = 0; i < indexCount; ++i)
+            unsigned int i = 0;
+            for (; i < indexCount; ++i)
             {
                 _indicesPtr[i] = indices[i] + _vertexCount;
+            }
+            if (_primitiveType == Mesh::TRIANGLE_STRIP)
+            {
+                _indicesPtr[i] = indices[i-1] + _vertexCount;
+                _indicesPtr += 1;
             }
         }
         _indicesPtr += indexCount;
@@ -287,6 +295,12 @@ void MeshBatch::draw()
     GL_ASSERT( glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0 ) );
 
 #ifdef EMSCRIPTEN
+    if (_started && _vertexCount != _model->getMesh()->getVertexCount()) {
+        _model->getMesh()->setVertexData(reinterpret_cast<const float*>(_vertices), 0, _vertexCount);
+    }
+    if (_started && _indexCount != _model->getMesh()->getPart(0)->getIndexCount()) {
+        _model->getMesh()->getPart(0)->setIndexData(_indices, 0, _indexCount );
+    }
     _model->draw();
     return;
 #endif

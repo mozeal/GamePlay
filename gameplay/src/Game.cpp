@@ -779,6 +779,17 @@ void Game::loadConfig()
                 FileSystem::loadResourceAliases(aliases);
             }
         }
+        else if (FileSystem::fileExists("res/game.config"))
+        {
+            _properties = Properties::create("res/game.config");
+            
+            // Load filesystem aliases.
+            Properties* aliases = _properties->getNamespace("aliases", true);
+            if (aliases)
+            {
+                FileSystem::loadResourceAliases(aliases);
+            }
+        }
         else
         {
             // Create an empty config
