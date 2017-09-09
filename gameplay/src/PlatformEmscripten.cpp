@@ -84,6 +84,7 @@ static double __timeStart;
 static double __timeAbsolute;
 static bool __vsync = WINDOW_VSYNC;
 static bool __mouseCaptured = false;
+static bool __leftMouseButtonPressed = false;
 static float __mouseCapturePointX = 0;
 static float __mouseCapturePointY = 0;
 static bool __multiSampling = false;
@@ -816,32 +817,64 @@ namespace gameplay
         int x = e->canvasX;
         int y = e->canvasY;
         gameplay::Mouse::MouseEvent mouseEvt;
+        bool eventConsumed = false;
+        
         if (eventType == EMSCRIPTEN_EVENT_MOUSEDOWN)
         {
-            mouseEvt = gameplay::Mouse::MOUSE_PRESS_LEFT_BUTTON;
-            if (!gameplay::Platform::mouseEventInternal(mouseEvt, x, y, 0))
+            switch(e->button)
+            {
+                default:
+                    __leftMouseButtonPressed = true;
+                    mouseEvt = gameplay::Mouse::MOUSE_PRESS_LEFT_BUTTON;
+                    break;
+                case 1:
+                    mouseEvt = gameplay::Mouse::MOUSE_PRESS_MIDDLE_BUTTON;
+                    break;
+                case 2:
+                    mouseEvt = gameplay::Mouse::MOUSE_PRESS_RIGHT_BUTTON;
+                    break;
+            }
+            eventConsumed = gameplay::Platform::mouseEventInternal(mouseEvt, x, y, 0);
+            if (!eventConsumed && e->button == 0)
             {
                 gameplay::Platform::touchEventInternal(gameplay::Touch::TOUCH_PRESS, x, y, 0, true);
             }
         }
         if (eventType == EMSCRIPTEN_EVENT_MOUSEUP)
         {
-            mouseEvt = gameplay::Mouse::MOUSE_RELEASE_LEFT_BUTTON;
-            if (!gameplay::Platform::mouseEventInternal(mouseEvt, x, y, 0))
+            switch(e->button)
+            {
+                default:
+                    __leftMouseButtonPressed = false;
+                    mouseEvt = gameplay::Mouse::MOUSE_RELEASE_LEFT_BUTTON;
+                    break;
+                case 1:
+                    mouseEvt = gameplay::Mouse::MOUSE_RELEASE_MIDDLE_BUTTON;
+                    break;
+                case 2:
+                    mouseEvt = gameplay::Mouse::MOUSE_RELEASE_RIGHT_BUTTON;
+                    break;
+            }
+            eventConsumed = gameplay::Platform::mouseEventInternal(mouseEvt, x, y, 0);
+            if (!eventConsumed && e->button == 0)
             {
                 gameplay::Platform::touchEventInternal(gameplay::Touch::TOUCH_RELEASE, x, y, 0, true);
             }
         }
         if (eventType == EMSCRIPTEN_EVENT_MOUSEMOVE && (e->movementX != 0 || e->movementY != 0))
         {
-            if (!gameplay::Platform::mouseEventInternal(gameplay::Mouse::MOUSE_MOVE, x, y, 0))
+            __mouseCapturePointX = x;
+            __mouseCapturePointY = y;
+            eventConsumed = gameplay::Platform::mouseEventInternal(gameplay::Mouse::MOUSE_MOVE, x, y, 0);
+            if (!eventConsumed && e->button == 0)
             {
-                // if (evt.xmotion.state & Button1Mask)
-                // {
-                //      gameplay::Platform::touchEventInternal(gameplay::Touch::TOUCH_MOVE, x, y, 0, true);
-                // }
+                if (__leftMouseButtonPressed)
+                {
+                    gameplay::Platform::touchEventInternal(gameplay::Touch::TOUCH_MOVE, x, y, 0, true);
+                }
             }
         }
+
         
         return 0;
     }

@@ -5,13 +5,25 @@ echo "Building ${APPNAME}"
 mkdir -p ./build
 
 emcc \
-../src/common/SamplesGame.cpp \
-../src/common/Sample.cpp \
-../src/common/Grid.cpp \
-../src/common/FirstPersonCamera.cpp \
+../src/SamplesGame.cpp \
+../src/Sample.cpp \
 ../src/TriangleSample.cpp \
 ../src/MeshPrimitiveSample.cpp \
+../src/MeshBatchSample.cpp \
+../src/TextureSample.cpp \
+../src/SpriteBatchSample.cpp \
+../src/SpriteSample.cpp \
 ../src/FontSample.cpp \
+../src/FormsSample.cpp \
+../src/LightSample.cpp \
+../src/ParticlesSample.cpp \
+../src/PostProcessSample.cpp \
+../src/SceneCreateSample.cpp \
+../src/SceneLoadSample.cpp \
+../src/PhysicsCollisionObjectSample.cpp \
+../src/FirstPersonCamera.cpp \
+../src/BillboardSample.cpp \
+../src/WaterSample.cpp \
 ./build/_gameplay.bc \
 ./build/_gameplay2.bc \
 ./build/_lua.bc \
@@ -30,7 +42,7 @@ emcc \
 -Wno-inconsistent-missing-override \
 -Wno-unused-value \
 -s USE_FREETYPE=1 -s USE_BULLET=1 -s USE_VORBIS=1 -s USE_LIBPNG=1 \
--s TOTAL_MEMORY=16777216 \
+-s TOTAL_MEMORY=33554432 \
 -s ALLOW_MEMORY_GROWTH=1 \
 -s BINARYEN=1 \
 -s BINARYEN_ASYNC_COMPILATION=1 \

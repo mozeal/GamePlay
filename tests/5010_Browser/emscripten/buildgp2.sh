@@ -11,7 +11,7 @@ emcc \
 ../../../GamePlay/src/MeshBatch.cpp \
 ../../../GamePlay/src/Sprite.cpp \
 ../../../GamePlay/src/SpriteBatch.cpp \
-../../../GamePlay/src/VertexAttributeBinding.cpp \
+../../../GamePlay/src/PlatformEmscripten.cpp \
 -I../../../GamePlay/src \
 -I../../../external-deps/include \
 -O2 \

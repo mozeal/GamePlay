@@ -22,14 +22,10 @@ MeshBatch::MeshBatch(const VertexFormat& vertexFormat, Mesh::PrimitiveType primi
     _vertexCapacity(0), _indexCapacity(0), _vertexCount(0), _indexCount(0), _vertices(NULL), _verticesPtr(NULL), _indices(NULL), _indicesPtr(NULL), _started(false)
 {
 #ifdef EMSCRIPTEN
-    Mesh *mesh = Mesh::createMesh(vertexFormat, initialCapacity, true);
+    _mesh = Mesh::createMesh(vertexFormat, initialCapacity, true);
     if( indexed ) {
-        mesh->addPart(primitiveType, Mesh::INDEX16, initialCapacity);
+        _mesh->addPart(primitiveType, Mesh::INDEX16, initialCapacity);
     }
-    _model = Model::create(mesh);
-    _model->getMesh()->release();
-    _model->setMaterial(material);
-
 #endif
     if( material ) {
         material->addRef();
@@ -41,7 +37,7 @@ MeshBatch::MeshBatch(const VertexFormat& vertexFormat, Mesh::PrimitiveType primi
 MeshBatch::~MeshBatch()
 {
 #ifdef EMSCRIPTEN
-    SAFE_RELEASE(_model);
+    SAFE_RELEASE(_mesh);
 #endif
     SAFE_RELEASE(_material);
     SAFE_DELETE_ARRAY(_vertices);
@@ -151,7 +147,7 @@ void MeshBatch::updateVertexAttributeBinding()
             Pass* p = t->getPassByIndex(j);
             GP_ASSERT(p);
 #ifdef EMSCRIPTEN
-            VertexAttributeBinding* b = VertexAttributeBinding::create(_model->getMesh(), p->getEffect());
+            VertexAttributeBinding* b = VertexAttributeBinding::create(_mesh, p->getEffect());
 #else
             VertexAttributeBinding* b = VertexAttributeBinding::create(_vertexFormat, _vertices, p->getEffect());
 #endif
@@ -250,17 +246,14 @@ bool MeshBatch::resize(unsigned int capacity)
     _indexCapacity = indexCapacity;
     
 #ifdef EMSCRIPTEN
-    if( _model->getMesh()->getVertexCount() < _vertexCapacity ||
-       _model->getMesh()->getPart(0)->getIndexCount() < _indexCapacity ) {
-        SAFE_RELEASE(_model);
+    if( _mesh->getVertexCount() < _vertexCapacity ||
+       _mesh->getPart(0)->getIndexCount() < _indexCapacity ) {
+        SAFE_RELEASE(_mesh);
         
-        Mesh *mesh = Mesh::createMesh(_vertexFormat, _vertexCapacity, true);
+        _mesh = Mesh::createMesh(_vertexFormat, _vertexCapacity, true);
         if( _indexed ) {
-            mesh->addPart(_primitiveType, Mesh::INDEX16, _indexCapacity);
+            _mesh->addPart(_primitiveType, Mesh::INDEX16, _indexCapacity);
         }
-        _model = Model::create(mesh);
-        _model->getMesh()->release();
-        _model->setMaterial(_material);
     }
 #endif
 
@@ -293,9 +286,9 @@ bool MeshBatch::isStarted() const
 void MeshBatch::finish()
 {
 #ifdef EMSCRIPTEN
-    _model->getMesh()->setVertexData(reinterpret_cast<const float*>(_vertices), 0, _vertexCount);
+    _mesh->setVertexData(reinterpret_cast<const float*>(_vertices), 0, _vertexCount);
     if( _indexed ) {
-        _model->getMesh()->getPart(0)->setIndexData(_indices, 0, _indexCount );
+        _mesh->getPart(0)->setIndexData(_indices, 0, _indexCount );
     }
 #endif
     _started = false;
@@ -311,13 +304,41 @@ void MeshBatch::draw()
     GL_ASSERT( glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0 ) );
 
 #ifdef EMSCRIPTEN
-    if (_started && _vertexCount != _model->getMesh()->getVertexCount()) {
-        _model->getMesh()->setVertexData(reinterpret_cast<const float*>(_vertices), 0, _vertexCount);
+    if (_started && _vertexCount != _mesh->getVertexCount()) {
+        _mesh->setVertexData(reinterpret_cast<const float*>(_vertices), 0, _vertexCount);
     }
-    if (_started && _indexCount != _model->getMesh()->getPart(0)->getIndexCount()) {
-        _model->getMesh()->getPart(0)->setIndexData(_indices, 0, _indexCount );
+    if (_started && _indexCount != _mesh->getPart(0)->getIndexCount()) {
+        _mesh->getPart(0)->setIndexData(_indices, 0, _indexCount );
     }
-    _model->draw();
+    
+    // No mesh parts (index buffers).
+    if (_material)
+    {
+        Technique* technique = _material->getTechnique();
+        GP_ASSERT(technique);
+        unsigned int passCount = technique->getPassCount();
+        for (unsigned int i = 0; i < passCount; ++i)
+        {
+            Pass* pass = technique->getPassByIndex(i);
+            GP_ASSERT(pass);
+            pass->bind();
+            
+            if (!_indexed)
+            {
+                GL_ASSERT( glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0) );
+                GL_ASSERT( glDrawArrays(_mesh->getPrimitiveType(), 0, _mesh->getVertexCount()) );
+            }
+            else
+            {
+                MeshPart* part = _mesh->getPart(0);
+                GP_ASSERT(part);
+                GL_ASSERT( glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, part->getIndexBuffer()) );
+                GL_ASSERT( glDrawElements(part->getPrimitiveType(), part->getIndexCount(), part->getIndexFormat(), 0) );
+            }
+            
+            pass->unbind();
+        }
+    }
     return;
 #endif
 

@@ -79,7 +79,6 @@ emcc \
 ../../../GamePlay/src/PhysicsVehicleWheel.cpp \
 ../../../GamePlay/src/Plane.cpp \
 ../../../GamePlay/src/Platform.cpp \
-../../../GamePlay/src/PlatformEmscripten.cpp \
 ../../../GamePlay/src/Properties.cpp \
 ../../../GamePlay/src/Quaternion.cpp \
 ../../../GamePlay/src/RadioButton.cpp \
@@ -108,6 +107,7 @@ emcc \
 ../../../GamePlay/src/Vector2.cpp \
 ../../../GamePlay/src/Vector3.cpp \
 ../../../GamePlay/src/Vector4.cpp \
+../../../GamePlay/src/VertexAttributeBinding.cpp \
 ../../../GamePlay/src/VertexFormat.cpp \
 ../../../GamePlay/src/VerticalLayout.cpp \
 ../../../GamePlay/src/gameplay-main-emscripten.cpp \

@@ -140,11 +140,32 @@
 		38485E431F5FD8FA0045104A /* PlatformiOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 38485BBD1F5FD8A80045104A /* PlatformiOS.mm */; };
 		38485E461F5FD9680045104A /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38485E441F5FD9640045104A /* libfreetype.a */; };
 		38485E471F5FD96B0045104A /* libgameplay-deps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38485E451F5FD9640045104A /* libgameplay-deps.a */; };
-		38791F9B1F6012FA00B3AF89 /* TriangleSample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38791F9A1F6012FA00B3AF89 /* TriangleSample.cpp */; };
-		38791FC01F6018AA00B3AF89 /* MeshPrimitiveSample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38791FA71F6018A700B3AF89 /* MeshPrimitiveSample.cpp */; };
-		38791FC61F6018AA00B3AF89 /* FontSample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38791FB81F6018A900B3AF89 /* FontSample.cpp */; };
-		38791FEC1F6019E700B3AF89 /* Sample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38791FE61F6019E700B3AF89 /* Sample.cpp */; };
-		38791FED1F6019E700B3AF89 /* SamplesGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38791FE81F6019E700B3AF89 /* SamplesGame.cpp */; };
+		3870F07D1F647A6B00B45BC4 /* PostProcessSample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3870F04A1F647A6400B45BC4 /* PostProcessSample.cpp */; };
+		3870F07E1F647A6B00B45BC4 /* FontSample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3870F04B1F647A6400B45BC4 /* FontSample.cpp */; };
+		3870F07F1F647A6B00B45BC4 /* InputSample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3870F04C1F647A6400B45BC4 /* InputSample.cpp */; };
+		3870F0801F647A6B00B45BC4 /* SpriteBatchSample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3870F04D1F647A6400B45BC4 /* SpriteBatchSample.cpp */; };
+		3870F0811F647A6B00B45BC4 /* FormsSample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3870F04E1F647A6400B45BC4 /* FormsSample.cpp */; };
+		3870F0821F647A6B00B45BC4 /* TerrainSample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3870F04F1F647A6400B45BC4 /* TerrainSample.cpp */; };
+		3870F0831F647A6B00B45BC4 /* SceneCreateSample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3870F0511F647A6500B45BC4 /* SceneCreateSample.cpp */; };
+		3870F0841F647A6B00B45BC4 /* SceneLoadSample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3870F0521F647A6500B45BC4 /* SceneLoadSample.cpp */; };
+		3870F0851F647A6B00B45BC4 /* LightSample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3870F0541F647A6500B45BC4 /* LightSample.cpp */; };
+		3870F0861F647A6B00B45BC4 /* SamplesGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3870F0581F647A6500B45BC4 /* SamplesGame.cpp */; };
+		3870F0871F647A6B00B45BC4 /* Grid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3870F0591F647A6500B45BC4 /* Grid.cpp */; };
+		3870F0881F647A6B00B45BC4 /* FirstPersonCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3870F05A1F647A6500B45BC4 /* FirstPersonCamera.cpp */; };
+		3870F0891F647A6B00B45BC4 /* GamepadSample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3870F05C1F647A6600B45BC4 /* GamepadSample.cpp */; };
+		3870F08A1F647A6B00B45BC4 /* MeshPrimitiveSample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3870F05E1F647A6600B45BC4 /* MeshPrimitiveSample.cpp */; };
+		3870F08B1F647A6B00B45BC4 /* BillboardSample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3870F05F1F647A6600B45BC4 /* BillboardSample.cpp */; };
+		3870F08C1F647A6B00B45BC4 /* SpriteSample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3870F0601F647A6600B45BC4 /* SpriteSample.cpp */; };
+		3870F08D1F647A6B00B45BC4 /* GestureSample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3870F0621F647A6600B45BC4 /* GestureSample.cpp */; };
+		3870F08E1F647A6B00B45BC4 /* TextureSample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3870F0671F647A6700B45BC4 /* TextureSample.cpp */; };
+		3870F08F1F647A6B00B45BC4 /* WaterSample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3870F0691F647A6700B45BC4 /* WaterSample.cpp */; };
+		3870F0901F647A6B00B45BC4 /* PhysicsCollisionObjectSample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3870F06A1F647A6800B45BC4 /* PhysicsCollisionObjectSample.cpp */; };
+		3870F0911F647A6B00B45BC4 /* ParticlesSample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3870F06F1F647A6800B45BC4 /* ParticlesSample.cpp */; };
+		3870F0921F647A6B00B45BC4 /* AudioSample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3870F0701F647A6900B45BC4 /* AudioSample.cpp */; };
+		3870F0931F647A6B00B45BC4 /* Sample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3870F0711F647A6900B45BC4 /* Sample.cpp */; };
+		3870F0941F647A6B00B45BC4 /* MeshBatchSample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3870F0721F647A6900B45BC4 /* MeshBatchSample.cpp */; };
+		3870F0951F647A6B00B45BC4 /* TriangleSample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3870F0741F647A6900B45BC4 /* TriangleSample.cpp */; };
+		3870F0961F647A6B00B45BC4 /* Audio3DSample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3870F0761F647A6A00B45BC4 /* Audio3DSample.cpp */; };
 		42049B5816ADBB61005DD1F9 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42049B5216ADBB61005DD1F9 /* CoreMotion.framework */; };
 		42049B5916ADBB61005DD1F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42049B5316ADBB61005DD1F9 /* Foundation.framework */; };
 		42049B5A16ADBB61005DD1F9 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42049B5416ADBB61005DD1F9 /* OpenAL.framework */; };
@@ -414,16 +435,59 @@
 		38485D301F5FD8B50045104A /* Font.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Font.cpp; path = ../../../gameplay/src/Font.cpp; sourceTree = "<group>"; };
 		38485E441F5FD9640045104A /* libfreetype.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfreetype.a; path = "../../external-deps/lib/macosx/x86_64/libfreetype.a"; sourceTree = "<group>"; };
 		38485E451F5FD9640045104A /* libgameplay-deps.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libgameplay-deps.a"; path = "../../external-deps/lib/macosx/x86_64/libgameplay-deps.a"; sourceTree = "<group>"; };
-		38791F991F6012F900B3AF89 /* TriangleSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TriangleSample.h; sourceTree = "<group>"; };
-		38791F9A1F6012FA00B3AF89 /* TriangleSample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TriangleSample.cpp; sourceTree = "<group>"; };
-		38791FA71F6018A700B3AF89 /* MeshPrimitiveSample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MeshPrimitiveSample.cpp; sourceTree = "<group>"; };
-		38791FB11F6018A800B3AF89 /* MeshPrimitiveSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeshPrimitiveSample.h; sourceTree = "<group>"; };
-		38791FB21F6018A800B3AF89 /* FontSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontSample.h; sourceTree = "<group>"; };
-		38791FB81F6018A900B3AF89 /* FontSample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FontSample.cpp; sourceTree = "<group>"; };
-		38791FE61F6019E700B3AF89 /* Sample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sample.cpp; sourceTree = "<group>"; };
-		38791FE71F6019E700B3AF89 /* Sample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sample.h; sourceTree = "<group>"; };
-		38791FE81F6019E700B3AF89 /* SamplesGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SamplesGame.cpp; sourceTree = "<group>"; };
-		38791FE91F6019E700B3AF89 /* SamplesGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SamplesGame.h; sourceTree = "<group>"; };
+		3870F01D1F641ADA00B45BC4 /* PlatformEmscripten.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlatformEmscripten.cpp; path = ../../../gameplay/src/PlatformEmscripten.cpp; sourceTree = "<group>"; };
+		3870F0491F647A6400B45BC4 /* PhysicsCollisionObjectSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysicsCollisionObjectSample.h; sourceTree = "<group>"; };
+		3870F04A1F647A6400B45BC4 /* PostProcessSample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PostProcessSample.cpp; sourceTree = "<group>"; };
+		3870F04B1F647A6400B45BC4 /* FontSample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FontSample.cpp; sourceTree = "<group>"; };
+		3870F04C1F647A6400B45BC4 /* InputSample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InputSample.cpp; sourceTree = "<group>"; };
+		3870F04D1F647A6400B45BC4 /* SpriteBatchSample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpriteBatchSample.cpp; sourceTree = "<group>"; };
+		3870F04E1F647A6400B45BC4 /* FormsSample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FormsSample.cpp; sourceTree = "<group>"; };
+		3870F04F1F647A6400B45BC4 /* TerrainSample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TerrainSample.cpp; sourceTree = "<group>"; };
+		3870F0501F647A6400B45BC4 /* WaterSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterSample.h; sourceTree = "<group>"; };
+		3870F0511F647A6500B45BC4 /* SceneCreateSample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneCreateSample.cpp; sourceTree = "<group>"; };
+		3870F0521F647A6500B45BC4 /* SceneLoadSample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneLoadSample.cpp; sourceTree = "<group>"; };
+		3870F0531F647A6500B45BC4 /* SceneLoadSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneLoadSample.h; sourceTree = "<group>"; };
+		3870F0541F647A6500B45BC4 /* LightSample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LightSample.cpp; sourceTree = "<group>"; };
+		3870F0551F647A6500B45BC4 /* AudioSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioSample.h; sourceTree = "<group>"; };
+		3870F0561F647A6500B45BC4 /* FontSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontSample.h; sourceTree = "<group>"; };
+		3870F0571F647A6500B45BC4 /* SceneCreateSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneCreateSample.h; sourceTree = "<group>"; };
+		3870F0581F647A6500B45BC4 /* SamplesGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SamplesGame.cpp; sourceTree = "<group>"; };
+		3870F0591F647A6500B45BC4 /* Grid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Grid.cpp; sourceTree = "<group>"; };
+		3870F05A1F647A6500B45BC4 /* FirstPersonCamera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FirstPersonCamera.cpp; sourceTree = "<group>"; };
+		3870F05B1F647A6500B45BC4 /* Audio3DSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Audio3DSample.h; sourceTree = "<group>"; };
+		3870F05C1F647A6600B45BC4 /* GamepadSample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GamepadSample.cpp; sourceTree = "<group>"; };
+		3870F05D1F647A6600B45BC4 /* MeshPrimitiveSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeshPrimitiveSample.h; sourceTree = "<group>"; };
+		3870F05E1F647A6600B45BC4 /* MeshPrimitiveSample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MeshPrimitiveSample.cpp; sourceTree = "<group>"; };
+		3870F05F1F647A6600B45BC4 /* BillboardSample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BillboardSample.cpp; sourceTree = "<group>"; };
+		3870F0601F647A6600B45BC4 /* SpriteSample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpriteSample.cpp; sourceTree = "<group>"; };
+		3870F0611F647A6600B45BC4 /* FirstPersonCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstPersonCamera.h; sourceTree = "<group>"; };
+		3870F0621F647A6600B45BC4 /* GestureSample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GestureSample.cpp; sourceTree = "<group>"; };
+		3870F0631F647A6600B45BC4 /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
+		3870F0641F647A6700B45BC4 /* TerrainSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TerrainSample.h; sourceTree = "<group>"; };
+		3870F0651F647A6700B45BC4 /* GamepadSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamepadSample.h; sourceTree = "<group>"; };
+		3870F0661F647A6700B45BC4 /* TriangleSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TriangleSample.h; sourceTree = "<group>"; };
+		3870F0671F647A6700B45BC4 /* TextureSample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextureSample.cpp; sourceTree = "<group>"; };
+		3870F0681F647A6700B45BC4 /* PostProcessSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostProcessSample.h; sourceTree = "<group>"; };
+		3870F0691F647A6700B45BC4 /* WaterSample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WaterSample.cpp; sourceTree = "<group>"; };
+		3870F06A1F647A6800B45BC4 /* PhysicsCollisionObjectSample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhysicsCollisionObjectSample.cpp; sourceTree = "<group>"; };
+		3870F06B1F647A6800B45BC4 /* BillboardSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillboardSample.h; sourceTree = "<group>"; };
+		3870F06C1F647A6800B45BC4 /* MeshBatchSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeshBatchSample.h; sourceTree = "<group>"; };
+		3870F06D1F647A6800B45BC4 /* InputSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputSample.h; sourceTree = "<group>"; };
+		3870F06E1F647A6800B45BC4 /* TextureSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureSample.h; sourceTree = "<group>"; };
+		3870F06F1F647A6800B45BC4 /* ParticlesSample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParticlesSample.cpp; sourceTree = "<group>"; };
+		3870F0701F647A6900B45BC4 /* AudioSample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AudioSample.cpp; sourceTree = "<group>"; };
+		3870F0711F647A6900B45BC4 /* Sample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sample.cpp; sourceTree = "<group>"; };
+		3870F0721F647A6900B45BC4 /* MeshBatchSample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MeshBatchSample.cpp; sourceTree = "<group>"; };
+		3870F0731F647A6900B45BC4 /* ParticlesSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticlesSample.h; sourceTree = "<group>"; };
+		3870F0741F647A6900B45BC4 /* TriangleSample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TriangleSample.cpp; sourceTree = "<group>"; };
+		3870F0751F647A6A00B45BC4 /* GestureSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureSample.h; sourceTree = "<group>"; };
+		3870F0761F647A6A00B45BC4 /* Audio3DSample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Audio3DSample.cpp; sourceTree = "<group>"; };
+		3870F0771F647A6A00B45BC4 /* SpriteSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteSample.h; sourceTree = "<group>"; };
+		3870F0781F647A6A00B45BC4 /* SamplesGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SamplesGame.h; sourceTree = "<group>"; };
+		3870F0791F647A6B00B45BC4 /* LightSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LightSample.h; sourceTree = "<group>"; };
+		3870F07A1F647A6B00B45BC4 /* FormsSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormsSample.h; sourceTree = "<group>"; };
+		3870F07B1F647A6B00B45BC4 /* SpriteBatchSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteBatchSample.h; sourceTree = "<group>"; };
+		3870F07C1F647A6B00B45BC4 /* Sample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sample.h; sourceTree = "<group>"; };
 		42049B5216ADBB61005DD1F9 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
 		42049B5316ADBB61005DD1F9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		42049B5416ADBB61005DD1F9 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/OpenAL.framework; sourceTree = DEVELOPER_DIR; };
@@ -652,6 +716,7 @@
 				38485C0F1F5FD8B20045104A /* Platform.cpp */,
 				38485BD61F5FD8AB0045104A /* Platform.h */,
 				38485BBD1F5FD8A80045104A /* PlatformiOS.mm */,
+				3870F01D1F641ADA00B45BC4 /* PlatformEmscripten.cpp */,
 				38485B2F1F5FD8970045104A /* PlatformMacOSX.mm */,
 				38485B761F5FD89F0045104A /* Properties.cpp */,
 				38485BC51F5FD8A90045104A /* Properties.h */,
@@ -732,17 +797,6 @@
 			path = GamePlay;
 			sourceTree = "<group>";
 		};
-		38791FE11F6019E700B3AF89 /* common */ = {
-			isa = PBXGroup;
-			children = (
-				38791FE61F6019E700B3AF89 /* Sample.cpp */,
-				38791FE71F6019E700B3AF89 /* Sample.h */,
-				38791FE81F6019E700B3AF89 /* SamplesGame.cpp */,
-				38791FE91F6019E700B3AF89 /* SamplesGame.h */,
-			);
-			path = common;
-			sourceTree = "<group>";
-		};
 		42C932B11491A0DB0098216A = {
 			isa = PBXGroup;
 			children = (
@@ -779,13 +833,58 @@
 		42C932C61491A0DB0098216A /* src */ = {
 			isa = PBXGroup;
 			children = (
-				38791FE11F6019E700B3AF89 /* common */,
-				38791FB81F6018A900B3AF89 /* FontSample.cpp */,
-				38791FB21F6018A800B3AF89 /* FontSample.h */,
-				38791FA71F6018A700B3AF89 /* MeshPrimitiveSample.cpp */,
-				38791FB11F6018A800B3AF89 /* MeshPrimitiveSample.h */,
-				38791F9A1F6012FA00B3AF89 /* TriangleSample.cpp */,
-				38791F991F6012F900B3AF89 /* TriangleSample.h */,
+				3870F0761F647A6A00B45BC4 /* Audio3DSample.cpp */,
+				3870F05B1F647A6500B45BC4 /* Audio3DSample.h */,
+				3870F0701F647A6900B45BC4 /* AudioSample.cpp */,
+				3870F0551F647A6500B45BC4 /* AudioSample.h */,
+				3870F05F1F647A6600B45BC4 /* BillboardSample.cpp */,
+				3870F06B1F647A6800B45BC4 /* BillboardSample.h */,
+				3870F05A1F647A6500B45BC4 /* FirstPersonCamera.cpp */,
+				3870F0611F647A6600B45BC4 /* FirstPersonCamera.h */,
+				3870F04B1F647A6400B45BC4 /* FontSample.cpp */,
+				3870F0561F647A6500B45BC4 /* FontSample.h */,
+				3870F04E1F647A6400B45BC4 /* FormsSample.cpp */,
+				3870F07A1F647A6B00B45BC4 /* FormsSample.h */,
+				3870F05C1F647A6600B45BC4 /* GamepadSample.cpp */,
+				3870F0651F647A6700B45BC4 /* GamepadSample.h */,
+				3870F0621F647A6600B45BC4 /* GestureSample.cpp */,
+				3870F0751F647A6A00B45BC4 /* GestureSample.h */,
+				3870F0591F647A6500B45BC4 /* Grid.cpp */,
+				3870F0631F647A6600B45BC4 /* Grid.h */,
+				3870F04C1F647A6400B45BC4 /* InputSample.cpp */,
+				3870F06D1F647A6800B45BC4 /* InputSample.h */,
+				3870F0541F647A6500B45BC4 /* LightSample.cpp */,
+				3870F0791F647A6B00B45BC4 /* LightSample.h */,
+				3870F0721F647A6900B45BC4 /* MeshBatchSample.cpp */,
+				3870F06C1F647A6800B45BC4 /* MeshBatchSample.h */,
+				3870F05E1F647A6600B45BC4 /* MeshPrimitiveSample.cpp */,
+				3870F05D1F647A6600B45BC4 /* MeshPrimitiveSample.h */,
+				3870F06F1F647A6800B45BC4 /* ParticlesSample.cpp */,
+				3870F0731F647A6900B45BC4 /* ParticlesSample.h */,
+				3870F06A1F647A6800B45BC4 /* PhysicsCollisionObjectSample.cpp */,
+				3870F0491F647A6400B45BC4 /* PhysicsCollisionObjectSample.h */,
+				3870F04A1F647A6400B45BC4 /* PostProcessSample.cpp */,
+				3870F0681F647A6700B45BC4 /* PostProcessSample.h */,
+				3870F0711F647A6900B45BC4 /* Sample.cpp */,
+				3870F07C1F647A6B00B45BC4 /* Sample.h */,
+				3870F0581F647A6500B45BC4 /* SamplesGame.cpp */,
+				3870F0781F647A6A00B45BC4 /* SamplesGame.h */,
+				3870F0511F647A6500B45BC4 /* SceneCreateSample.cpp */,
+				3870F0571F647A6500B45BC4 /* SceneCreateSample.h */,
+				3870F0521F647A6500B45BC4 /* SceneLoadSample.cpp */,
+				3870F0531F647A6500B45BC4 /* SceneLoadSample.h */,
+				3870F04D1F647A6400B45BC4 /* SpriteBatchSample.cpp */,
+				3870F07B1F647A6B00B45BC4 /* SpriteBatchSample.h */,
+				3870F0601F647A6600B45BC4 /* SpriteSample.cpp */,
+				3870F0771F647A6A00B45BC4 /* SpriteSample.h */,
+				3870F04F1F647A6400B45BC4 /* TerrainSample.cpp */,
+				3870F0641F647A6700B45BC4 /* TerrainSample.h */,
+				3870F0671F647A6700B45BC4 /* TextureSample.cpp */,
+				3870F06E1F647A6800B45BC4 /* TextureSample.h */,
+				3870F0741F647A6900B45BC4 /* TriangleSample.cpp */,
+				3870F0661F647A6700B45BC4 /* TriangleSample.h */,
+				3870F0691F647A6700B45BC4 /* WaterSample.cpp */,
+				3870F0501F647A6400B45BC4 /* WaterSample.h */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -963,28 +1062,33 @@
 				38485D5B1F5FD8B60045104A /* Script.cpp in Sources */,
 				38485DA71F5FD8B60045104A /* HeightField.cpp in Sources */,
 				38485D581F5FD8B60045104A /* Frustum.cpp in Sources */,
+				3870F0941F647A6B00B45BC4 /* MeshBatchSample.cpp in Sources */,
 				38485DB01F5FD8B60045104A /* ThemeStyle.cpp in Sources */,
 				38485DA01F5FD8B60045104A /* Animation.cpp in Sources */,
 				38485D4A1F5FD8B60045104A /* AIMessage.cpp in Sources */,
 				38485DB31F5FD8B60045104A /* ImageControl.cpp in Sources */,
 				38485DA61F5FD8B60045104A /* Effect.cpp in Sources */,
 				38485D771F5FD8B60045104A /* Curve.cpp in Sources */,
-				38791FC61F6018AA00B3AF89 /* FontSample.cpp in Sources */,
 				38485D6A1F5FD8B60045104A /* Text.cpp in Sources */,
 				38485D8F1F5FD8B60045104A /* JoystickControl.cpp in Sources */,
 				38485D6D1F5FD8B60045104A /* AudioController.cpp in Sources */,
 				38485D461F5FD8B60045104A /* Transform.cpp in Sources */,
 				38485D381F5FD8B60045104A /* MathUtil.cpp in Sources */,
 				38485D4D1F5FD8B60045104A /* Theme.cpp in Sources */,
+				3870F0921F647A6B00B45BC4 /* AudioSample.cpp in Sources */,
 				38485D9D1F5FD8B60045104A /* DebugNew.cpp in Sources */,
+				3870F0861F647A6B00B45BC4 /* SamplesGame.cpp in Sources */,
 				38485D7A1F5FD8B60045104A /* Form.cpp in Sources */,
 				38485D391F5FD8B60045104A /* AIController.cpp in Sources */,
 				38485D5E1F5FD8B60045104A /* Properties.cpp in Sources */,
+				3870F0931F647A6B00B45BC4 /* Sample.cpp in Sources */,
 				38485D451F5FD8B60045104A /* ParticleEmitter.cpp in Sources */,
 				38485D6C1F5FD8B60045104A /* ScriptController.cpp in Sources */,
+				3870F0951F647A6B00B45BC4 /* TriangleSample.cpp in Sources */,
 				38485D951F5FD8B60045104A /* AIAgent.cpp in Sources */,
 				38485DB81F5FD8B60045104A /* Texture.cpp in Sources */,
 				38485D541F5FD8B60045104A /* TerrainPatch.cpp in Sources */,
+				3870F0961F647A6B00B45BC4 /* Audio3DSample.cpp in Sources */,
 				38485D821F5FD8B60045104A /* PhysicsCollisionObject.cpp in Sources */,
 				38485DAB1F5FD8B60045104A /* Matrix.cpp in Sources */,
 				38485DB21F5FD8B60045104A /* PhysicsGhostObject.cpp in Sources */,
@@ -995,11 +1099,11 @@
 				38485DB11F5FD8B60045104A /* Platform.cpp in Sources */,
 				38485D4F1F5FD8B60045104A /* AIState.cpp in Sources */,
 				38485D601F5FD8B60045104A /* AnimationController.cpp in Sources */,
-				38791FC01F6018AA00B3AF89 /* MeshPrimitiveSample.cpp in Sources */,
-				38791FED1F6019E700B3AF89 /* SamplesGame.cpp in Sources */,
 				38485DA11F5FD8B60045104A /* Mesh.cpp in Sources */,
 				38485D671F5FD8B60045104A /* ScriptTarget.cpp in Sources */,
 				38485D871F5FD8B60045104A /* SpriteBatch.cpp in Sources */,
+				3870F0811F647A6B00B45BC4 /* FormsSample.cpp in Sources */,
+				3870F0871F647A6B00B45BC4 /* Grid.cpp in Sources */,
 				38485D4B1F5FD8B60045104A /* PhysicsConstraint.cpp in Sources */,
 				38485DB61F5FD8B60045104A /* VertexFormat.cpp in Sources */,
 				38485D6F1F5FD8B60045104A /* SceneLoader.cpp in Sources */,
@@ -1012,6 +1116,7 @@
 				38485D5D1F5FD8B60045104A /* Button.cpp in Sources */,
 				38485D7D1F5FD8B60045104A /* Model.cpp in Sources */,
 				38485D401F5FD8B60045104A /* MaterialParameter.cpp in Sources */,
+				3870F0821F647A6B00B45BC4 /* TerrainSample.cpp in Sources */,
 				38485D7F1F5FD8B60045104A /* Image.cpp in Sources */,
 				38485D4E1F5FD8B60045104A /* Plane.cpp in Sources */,
 				38485D371F5FD8B60045104A /* Sprite.cpp in Sources */,
@@ -1022,6 +1127,8 @@
 				38485D631F5FD8B60045104A /* PhysicsRigidBody.cpp in Sources */,
 				38485D8B1F5FD8B60045104A /* Quaternion.cpp in Sources */,
 				38485D7B1F5FD8B60045104A /* Joint.cpp in Sources */,
+				3870F0891F647A6B00B45BC4 /* GamepadSample.cpp in Sources */,
+				3870F07D1F647A6B00B45BC4 /* PostProcessSample.cpp in Sources */,
 				38485DAC1F5FD8B60045104A /* Control.cpp in Sources */,
 				38485DA41F5FD8B60045104A /* DepthStencilTarget.cpp in Sources */,
 				38485D791F5FD8B60045104A /* MeshPart.cpp in Sources */,
@@ -1044,36 +1151,49 @@
 				38485D931F5FD8B60045104A /* TextBox.cpp in Sources */,
 				38485E401F5FD8B60045104A /* AudioSource.cpp in Sources */,
 				38485D5C1F5FD8B60045104A /* Bundle.cpp in Sources */,
+				3870F07F1F647A6B00B45BC4 /* InputSample.cpp in Sources */,
 				38485D341F5FD8B60045104A /* Scene.cpp in Sources */,
 				38485D351F5FD8B60045104A /* FileSystem.cpp in Sources */,
 				38485D9C1F5FD8B60045104A /* VerticalLayout.cpp in Sources */,
+				3870F0851F647A6B00B45BC4 /* LightSample.cpp in Sources */,
 				38485D4C1F5FD8B60045104A /* RenderState.cpp in Sources */,
 				38485D701F5FD8B60045104A /* RadioButton.cpp in Sources */,
 				38485D8E1F5FD8B60045104A /* Vector4.cpp in Sources */,
 				38485D971F5FD8B60045104A /* AIStateMachine.cpp in Sources */,
 				38485D611F5FD8B60045104A /* FrameBuffer.cpp in Sources */,
-				38791F9B1F6012FA00B3AF89 /* TriangleSample.cpp in Sources */,
 				38485D991F5FD8B60045104A /* Slider.cpp in Sources */,
 				38485D6E1F5FD8B60045104A /* PhysicsSocketConstraint.cpp in Sources */,
 				38485D321F5FD8B60045104A /* AudioListener.cpp in Sources */,
 				38485DAF1F5FD8B60045104A /* Ref.cpp in Sources */,
+				3870F08F1F647A6B00B45BC4 /* WaterSample.cpp in Sources */,
 				38485DA91F5FD8B60045104A /* PhysicsController.cpp in Sources */,
+				3870F0911F647A6B00B45BC4 /* ParticlesSample.cpp in Sources */,
+				3870F07E1F647A6B00B45BC4 /* FontSample.cpp in Sources */,
 				38485D621F5FD8B60045104A /* BoundingBox.cpp in Sources */,
+				3870F0801F647A6B00B45BC4 /* SpriteBatchSample.cpp in Sources */,
+				3870F08C1F647A6B00B45BC4 /* SpriteSample.cpp in Sources */,
 				38485D751F5FD8B60045104A /* RenderTarget.cpp in Sources */,
+				3870F0881F647A6B00B45BC4 /* FirstPersonCamera.cpp in Sources */,
+				3870F0901F647A6B00B45BC4 /* PhysicsCollisionObjectSample.cpp in Sources */,
 				38485DB41F5FD8B60045104A /* ScreenDisplayer.cpp in Sources */,
 				38485D8A1F5FD8B60045104A /* gameplay-main-macosx.mm in Sources */,
 				38485D721F5FD8B60045104A /* Terrain.cpp in Sources */,
 				38485D761F5FD8B60045104A /* CheckBox.cpp in Sources */,
+				3870F0831F647A6B00B45BC4 /* SceneCreateSample.cpp in Sources */,
+				3870F08D1F647A6B00B45BC4 /* GestureSample.cpp in Sources */,
 				38485D571F5FD8B60045104A /* VertexAttributeBinding.cpp in Sources */,
+				3870F08B1F647A6B00B45BC4 /* BillboardSample.cpp in Sources */,
 				38485D851F5FD8B60045104A /* AnimationValue.cpp in Sources */,
 				38485D421F5FD8B60045104A /* AbsoluteLayout.cpp in Sources */,
+				3870F0841F647A6B00B45BC4 /* SceneLoadSample.cpp in Sources */,
 				38485D901F5FD8B60045104A /* Vector3.cpp in Sources */,
 				38485D881F5FD8B60045104A /* FlowLayout.cpp in Sources */,
+				3870F08A1F647A6B00B45BC4 /* MeshPrimitiveSample.cpp in Sources */,
+				3870F08E1F647A6B00B45BC4 /* TextureSample.cpp in Sources */,
 				38485D5A1F5FD8B60045104A /* PhysicsVehicle.cpp in Sources */,
 				38485D941F5FD8B60045104A /* Layout.cpp in Sources */,
 				38485D491F5FD8B60045104A /* ControlFactory.cpp in Sources */,
 				38485D3E1F5FD8B60045104A /* PhysicsCharacter.cpp in Sources */,
-				38791FEC1F6019E700B3AF89 /* Sample.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

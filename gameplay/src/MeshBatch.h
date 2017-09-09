@@ -181,7 +181,7 @@ private:
     bool _started;
 
 #ifdef EMSCRIPTEN
-    Model * _model;
+    Mesh *_mesh;
 #endif
 };
 
