@@ -22,19 +22,19 @@ MeshBatch::MeshBatch(const VertexFormat& vertexFormat, Mesh::PrimitiveType primi
     _vertexCapacity(0), _indexCapacity(0), _vertexCount(0), _indexCount(0), _vertices(NULL), _verticesPtr(NULL), _indices(NULL), _indicesPtr(NULL), _started(false)
 {
 #ifdef EMSCRIPTEN
-    Mesh *mesh = Mesh::createMesh(vertexFormat, initialCapacity*20, true);
+    Mesh *mesh = Mesh::createMesh(vertexFormat, initialCapacity, true);
     if( indexed ) {
-        mesh->addPart(primitiveType, Mesh::INDEX16, initialCapacity*20);
+        mesh->addPart(primitiveType, Mesh::INDEX16, initialCapacity);
     }
     _model = Model::create(mesh);
     _model->getMesh()->release();
     _model->setMaterial(material);
 
-#else
+#endif
     if( material ) {
         material->addRef();
     }
-#endif
+
     resize(initialCapacity);
 }
 
@@ -248,6 +248,22 @@ bool MeshBatch::resize(unsigned int capacity)
     _capacity = capacity;
     _vertexCapacity = vertexCapacity;
     _indexCapacity = indexCapacity;
+    
+#ifdef EMSCRIPTEN
+    if( _model->getMesh()->getVertexCount() < _vertexCapacity ||
+       _model->getMesh()->getPart(0)->getIndexCount() < _indexCapacity ) {
+        SAFE_RELEASE(_model);
+        
+        Mesh *mesh = Mesh::createMesh(_vertexFormat, _vertexCapacity, true);
+        if( _indexed ) {
+            mesh->addPart(_primitiveType, Mesh::INDEX16, _indexCapacity);
+        }
+        _model = Model::create(mesh);
+        _model->getMesh()->release();
+        _model->setMaterial(_material);
+    }
+#endif
+
 
     // Update our vertex attribute bindings now that our client array pointers have changed
     updateVertexAttributeBinding();
