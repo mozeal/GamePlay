@@ -18,6 +18,7 @@ void Platform::touchEventInternal(Touch::TouchEvent evt, int x, int y, unsigned 
 
 void Platform::keyEventInternal(Keyboard::KeyEvent evt, int key)
 {
+    //printf( "Platform: %i\n", key );
     if (!Form::keyEventInternal(evt, key))
     {
         Game::getInstance()->keyEventInternal(evt, key);

@@ -130,10 +130,11 @@ static EGLenum checkErrorEGL(const char* msg)
 }
 
 // Gets the gameplay::Keyboard::Key enumeration constant that corresponds to the given X11 key symbol.
-static gameplay::Keyboard::Key getKey(KeySym sym)
+static gameplay::Keyboard::Key getKey(char sym)
 {
     switch (sym)
     {
+            /*
         case XK_Sys_Req:
             return gameplay::Keyboard::KEY_SYSREQ;
         case XK_Break:
@@ -247,203 +248,205 @@ static gameplay::Keyboard::Key getKey(KeySym sym)
         case XK_F12:
             return gameplay::Keyboard::KEY_F12;
         case XK_KP_Space:
-        case XK_space:
+             case XK_EuroSign:
+             return gameplay::Keyboard::KEY_EURO;
+             case XK_sterling:
+             return gameplay::Keyboard::KEY_POUND;
+             case XK_yen:
+             return gameplay::Keyboard::KEY_YEN;
+             case XK_periodcentered:
+             return gameplay::Keyboard::KEY_MIDDLE_DOT;
+
+             */
+        case ' ':
             return gameplay::Keyboard::KEY_SPACE;
-        case XK_parenright:
+        case ')':
             return gameplay::Keyboard::KEY_RIGHT_PARENTHESIS;
-        case XK_0:
+        case '0':
             return gameplay::Keyboard::KEY_ZERO;
-        case XK_exclam:
+        case '!':
             return gameplay::Keyboard::KEY_EXCLAM;
-        case XK_1:
+        case '1':
             return gameplay::Keyboard::KEY_ONE;
-        case XK_at:
+        case '@':
             return gameplay::Keyboard::KEY_AT;
-        case XK_2:
+        case '2':
             return gameplay::Keyboard::KEY_TWO;
-        case XK_numbersign:
+        case '#':
             return gameplay::Keyboard::KEY_NUMBER;
-        case XK_3:
+        case '3':
             return gameplay::Keyboard::KEY_THREE;
-        case XK_dollar:
+        case '$':
             return gameplay::Keyboard::KEY_DOLLAR;
-        case XK_4:
+        case '4':
             return gameplay::Keyboard::KEY_FOUR;
-        case XK_percent:
-        case XK_asciicircum :
-            return gameplay::Keyboard::KEY_CIRCUMFLEX;
+        case '%':
             return gameplay::Keyboard::KEY_PERCENT;
-        case XK_5:
+        case '5':
             return gameplay::Keyboard::KEY_FIVE;
-        case XK_6:
+        case '^' :
+            return gameplay::Keyboard::KEY_CIRCUMFLEX;
+        case '6':
             return gameplay::Keyboard::KEY_SIX;
-        case XK_ampersand:
+        case '&':
             return gameplay::Keyboard::KEY_AMPERSAND;
-        case XK_7:
+        case '7':
             return gameplay::Keyboard::KEY_SEVEN;
-        case XK_asterisk:
+        case '*':
             return gameplay::Keyboard::KEY_ASTERISK;
-        case XK_8:
+        case '8':
             return gameplay::Keyboard::KEY_EIGHT;
-        case XK_parenleft:
+        case '(':
             return gameplay::Keyboard::KEY_LEFT_PARENTHESIS;
-        case XK_9:
+        case '9':
             return gameplay::Keyboard::KEY_NINE;
-        case XK_equal:
+        case '=':
             return gameplay::Keyboard::KEY_EQUAL;
-        case XK_plus:
+        case '+':
             return gameplay::Keyboard::KEY_PLUS;
-        case XK_less:
+        case '<':
             return gameplay::Keyboard::KEY_LESS_THAN;
-        case XK_comma:
+        case ',':
             return gameplay::Keyboard::KEY_COMMA;
-        case XK_underscore:
+        case '_':
             return gameplay::Keyboard::KEY_UNDERSCORE;
-        case XK_minus:
+        case '-':
             return gameplay::Keyboard::KEY_MINUS;
-        case XK_greater:
+        case '>':
             return gameplay::Keyboard::KEY_GREATER_THAN;
-        case XK_period:
+        case '.':
             return gameplay::Keyboard::KEY_PERIOD;
-        case XK_colon:
+        case ':':
             return gameplay::Keyboard::KEY_COLON;
-        case XK_semicolon:
+        case ';':
             return gameplay::Keyboard::KEY_SEMICOLON;
-        case XK_question:
+        case '?':
             return gameplay::Keyboard::KEY_QUESTION;
-        case XK_slash:
+        case '/':
             return gameplay::Keyboard::KEY_SLASH;
-        case XK_grave:
+        case '`':
             return gameplay::Keyboard::KEY_GRAVE;
-        case XK_asciitilde:
+        case '~':
             return gameplay::Keyboard::KEY_TILDE;
-        case XK_braceleft:
+        case '{':
             return gameplay::Keyboard::KEY_LEFT_BRACE;
-        case XK_bracketleft:
+        case '[':
             return gameplay::Keyboard::KEY_LEFT_BRACKET;
-        case XK_bar:
+        case '|':
             return gameplay::Keyboard::KEY_BAR;
-        case XK_backslash:
+        case '\\':
             return gameplay::Keyboard::KEY_BACK_SLASH;
-        case XK_braceright:
+        case '}':
             return gameplay::Keyboard::KEY_RIGHT_BRACE;
-        case XK_bracketright:
+        case ']':
             return gameplay::Keyboard::KEY_RIGHT_BRACKET;
-        case XK_quotedbl:
+        case '"':
             return gameplay::Keyboard::KEY_QUOTE;
-        case XK_apostrophe:
+        case '\'':
             return gameplay::Keyboard::KEY_APOSTROPHE;
-        case XK_EuroSign:
-            return gameplay::Keyboard::KEY_EURO;
-        case XK_sterling:
-            return gameplay::Keyboard::KEY_POUND;
-        case XK_yen:
-            return gameplay::Keyboard::KEY_YEN;
-        case XK_periodcentered:
-            return gameplay::Keyboard::KEY_MIDDLE_DOT;
-        case XK_A:
+        case 'A':
             return gameplay::Keyboard::KEY_CAPITAL_A;
-        case XK_a:
+        case 'a':
             return gameplay::Keyboard::KEY_A;
-        case XK_B:
+        case 'B':
             return gameplay::Keyboard::KEY_CAPITAL_B;
-        case XK_b:
+        case 'b':
             return gameplay::Keyboard::KEY_B;
-        case XK_C:
+        case 'C':
             return gameplay::Keyboard::KEY_CAPITAL_C;
-        case XK_c:
+        case 'c':
             return gameplay::Keyboard::KEY_C;
-        case XK_D:
+        case 'D':
             return gameplay::Keyboard::KEY_CAPITAL_D;
-        case XK_d:
+        case 'd':
             return gameplay::Keyboard::KEY_D;
-        case XK_E:
+        case 'E':
             return gameplay::Keyboard::KEY_CAPITAL_E;
-        case XK_e:
+        case 'e':
             return gameplay::Keyboard::KEY_E;
-        case XK_F:
+        case 'F':
             return gameplay::Keyboard::KEY_CAPITAL_F;
-        case XK_f:
+        case 'f':
             return gameplay::Keyboard::KEY_F;
-        case XK_G:
+        case 'G':
             return gameplay::Keyboard::KEY_CAPITAL_G;
-        case XK_g:
+        case 'g':
             return gameplay::Keyboard::KEY_G;
-        case XK_H:
+        case 'H':
             return gameplay::Keyboard::KEY_CAPITAL_H;
-        case XK_h:
+        case 'h':
             return gameplay::Keyboard::KEY_H;
-        case XK_I:
+        case 'I':
             return gameplay::Keyboard::KEY_CAPITAL_I;
-        case XK_i:
+        case 'i':
             return gameplay::Keyboard::KEY_I;
-        case XK_J:
+        case 'J':
             return gameplay::Keyboard::KEY_CAPITAL_J;
-        case XK_j:
+        case 'j':
             return gameplay::Keyboard::KEY_J;
-        case XK_K:
+        case 'K':
             return gameplay::Keyboard::KEY_CAPITAL_K;
-        case XK_k:
+        case 'k':
             return gameplay::Keyboard::KEY_K;
-        case XK_L:
+        case 'L':
             return gameplay::Keyboard::KEY_CAPITAL_L;
-        case XK_l:
+        case 'l':
             return gameplay::Keyboard::KEY_L;
-        case XK_M:
+        case 'M':
             return gameplay::Keyboard::KEY_CAPITAL_M;
-        case XK_m:
+        case 'm':
             return gameplay::Keyboard::KEY_M;
-        case XK_N:
+        case 'N':
             return gameplay::Keyboard::KEY_CAPITAL_N;
-        case XK_n:
+        case 'n':
             return gameplay::Keyboard::KEY_N;
-        case XK_O:
+        case 'O':
             return gameplay::Keyboard::KEY_CAPITAL_O;
-        case XK_o:
+        case 'o':
             return gameplay::Keyboard::KEY_O;
-        case XK_P:
+        case 'P':
             return gameplay::Keyboard::KEY_CAPITAL_P;
-        case XK_p:
+        case 'p':
             return gameplay::Keyboard::KEY_P;
-        case XK_Q:
+        case 'Q':
             return gameplay::Keyboard::KEY_CAPITAL_Q;
-        case XK_q:
+        case 'q':
             return gameplay::Keyboard::KEY_Q;
-        case XK_R:
+        case 'R':
             return gameplay::Keyboard::KEY_CAPITAL_R;
-        case XK_r:
+        case 'r':
             return gameplay::Keyboard::KEY_R;
-        case XK_S:
+        case 'S':
             return gameplay::Keyboard::KEY_CAPITAL_S;
-        case XK_s:
+        case 's':
             return gameplay::Keyboard::KEY_S;
-        case XK_T:
+        case 'T':
             return gameplay::Keyboard::KEY_CAPITAL_T;
-        case XK_t:
+        case 't':
             return gameplay::Keyboard::KEY_T;
-        case XK_U:
+        case 'U':
             return gameplay::Keyboard::KEY_CAPITAL_U;
-        case XK_u:
+        case 'u':
             return gameplay::Keyboard::KEY_U;
-        case XK_V:
+        case 'V':
             return gameplay::Keyboard::KEY_CAPITAL_V;
-        case XK_v:
+        case 'v':
             return gameplay::Keyboard::KEY_V;
-        case XK_W:
+        case 'W':
             return gameplay::Keyboard::KEY_CAPITAL_W;
-        case XK_w:
+        case 'w':
             return gameplay::Keyboard::KEY_W;
-        case XK_X:
+        case 'X':
             return gameplay::Keyboard::KEY_CAPITAL_X;
-        case XK_x:
+        case 'x':
             return gameplay::Keyboard::KEY_X;
-        case XK_Y:
+        case 'Y':
             return gameplay::Keyboard::KEY_CAPITAL_Y;
-        case XK_y:
+        case 'y':
             return gameplay::Keyboard::KEY_Y;
-        case XK_Z:
+        case 'Z':
             return gameplay::Keyboard::KEY_CAPITAL_Z;
-        case XK_z:
+        case 'z':
             return gameplay::Keyboard::KEY_Z;
         default:
             return gameplay::Keyboard::KEY_NONE;
@@ -879,6 +882,80 @@ namespace gameplay
         return 0;
     }
     
+    EM_BOOL wheel_callback(int eventType, const EmscriptenWheelEvent *e, void *userData)
+    {
+        //printf("%d wheel %.3f %.3f %.3f %ld\n", eventType, e->deltaX, e->deltaY, e->deltaZ, e->deltaMode);
+        
+        if (eventType == EMSCRIPTEN_EVENT_WHEEL)
+        {
+            gameplay::Platform::mouseEventInternal(gameplay::Mouse::MOUSE_WHEEL, __mouseCapturePointX, __mouseCapturePointY, -e->deltaY * 0.08);
+        }
+        
+        return 1;
+    }
+    
+    int utf8_to_unicode(unsigned char const charValue[])
+    {
+        int charcode = 0;
+        int _i = 0;
+        unsigned int t = charValue[_i++];
+        
+        if (t < 128)
+        {
+            return t;
+        }
+        
+        int high_bit_mask = (1 << 6) -1;
+        int high_bit_shift = 0;
+        int total_bits = 0;
+        const int other_bits = 6;
+        while((t & 0xC0) == 0xC0)
+        {
+            t <<= 1;
+            t &= 0xff;
+            total_bits += 6;
+            high_bit_mask >>= 1;
+            high_bit_shift++;
+            charcode <<= other_bits;
+            charcode |= charValue[_i] & ((1 << other_bits)-1);
+            _i++;
+        }
+        charcode |= ((t >> high_bit_shift) & high_bit_mask) << total_bits;
+        return charcode;
+    }
+    
+
+    
+    EM_BOOL keyboard_callback(int eventType, const EmscriptenKeyboardEvent *e, void *userData)
+    {
+         //printf("%d key: %s code: %s ctrl: %d shift: %d alt: %d meta: %d charCode: %lu keyCode: %lu which: %lu\n", eventType,
+         //       e->key, e->code, e->ctrlKey, e->shiftKey, e->altKey, e->metaKey, e->charCode, e->keyCode, e->which);
+     
+        
+        if (e->repeat)
+            return 1;
+        
+        
+        if (eventType == EMSCRIPTEN_EVENT_KEYDOWN) {
+            gameplay::Keyboard::Key key = getKey(e->key[0]);
+            gameplay::Platform::keyEventInternal(gameplay::Keyboard::KEY_PRESS, key );
+            
+            int character = utf8_to_unicode((const unsigned char *)e->key);
+            if( (!e->metaKey) && character)
+            {
+                gameplay::Platform::keyEventInternal(Keyboard::KEY_CHAR, character);
+            }
+        }
+        else if (eventType == EMSCRIPTEN_EVENT_KEYUP) {
+            gameplay::Platform::keyEventInternal(gameplay::Keyboard::KEY_RELEASE, getKey(e->key[0]));
+        }
+        else if (eventType == EMSCRIPTEN_EVENT_KEYPRESS ) {
+            int key = getKey(e->key[0]);
+        }
+        
+        return 1;
+    }
+    
     void main_loop_iter(void* _game)
     {
         Game* game = (Game*)_game;
@@ -926,11 +1003,18 @@ namespace gameplay
         // Run the game.
         _game->run();
         
-        emscripten_set_click_callback(0, 0, 1, mouse_callback);
-        emscripten_set_mousedown_callback(0, 0, 1, mouse_callback);
-        emscripten_set_mouseup_callback(0, 0, 1, mouse_callback);
-        emscripten_set_dblclick_callback(0, 0, 1, mouse_callback);
-        emscripten_set_mousemove_callback(0, 0, 1, mouse_callback);
+        //emscripten_set_click_callback(0, 0, true, mouse_callback);
+        //emscripten_set_dblclick_callback(0, 0, true, mouse_callback);
+
+        emscripten_set_mousedown_callback("#canvas", 0, true, mouse_callback);
+        emscripten_set_mouseup_callback(0, 0, true, mouse_callback);
+        emscripten_set_mousemove_callback(0, 0, true, mouse_callback);
+        emscripten_set_wheel_callback("#canvas", 0, true, wheel_callback);
+        
+        emscripten_set_keypress_callback(0, 0, true, keyboard_callback);
+        emscripten_set_keydown_callback(0, 0, true, keyboard_callback);
+        emscripten_set_keyup_callback(0, 0, true, keyboard_callback);
+
         emscripten_set_main_loop_arg(&main_loop_iter, (void *)_game, 0, 1);
         
         return 0;

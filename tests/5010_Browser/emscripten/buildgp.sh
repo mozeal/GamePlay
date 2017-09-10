@@ -39,7 +39,6 @@ emcc \
 ../../../GamePlay/src/FileSystem.cpp \
 ../../../GamePlay/src/FlowLayout.cpp \
 ../../../GamePlay/src/Font.cpp \
-../../../GamePlay/src/Form.cpp \
 ../../../GamePlay/src/FrameBuffer.cpp \
 ../../../GamePlay/src/Frustum.cpp \
 ../../../GamePlay/src/Game.cpp \
@@ -57,6 +56,8 @@ emcc \
 ../../../GamePlay/src/MaterialParameter.cpp \
 ../../../GamePlay/src/MathUtil.cpp \
 ../../../GamePlay/src/Matrix.cpp \
+../../../GamePlay/src/Mesh.cpp \
+../../../GamePlay/src/MeshBatch.cpp \
 ../../../GamePlay/src/MeshPart.cpp \
 ../../../GamePlay/src/MeshSkin.cpp \
 ../../../GamePlay/src/Model.cpp \
@@ -78,7 +79,6 @@ emcc \
 ../../../GamePlay/src/PhysicsVehicle.cpp \
 ../../../GamePlay/src/PhysicsVehicleWheel.cpp \
 ../../../GamePlay/src/Plane.cpp \
-../../../GamePlay/src/Platform.cpp \
 ../../../GamePlay/src/Properties.cpp \
 ../../../GamePlay/src/Quaternion.cpp \
 ../../../GamePlay/src/RadioButton.cpp \
@@ -94,11 +94,12 @@ emcc \
 ../../../GamePlay/src/ScriptController.cpp \
 ../../../GamePlay/src/ScriptTarget.cpp \
 ../../../GamePlay/src/Slider.cpp \
+../../../GamePlay/src/Sprite.cpp \
+../../../GamePlay/src/SpriteBatch.cpp \
 ../../../GamePlay/src/Technique.cpp \
 ../../../GamePlay/src/Terrain.cpp \
 ../../../GamePlay/src/TerrainPatch.cpp \
 ../../../GamePlay/src/Text.cpp \
-../../../GamePlay/src/TextBox.cpp \
 ../../../GamePlay/src/Texture.cpp \
 ../../../GamePlay/src/Theme.cpp \
 ../../../GamePlay/src/ThemeStyle.cpp \

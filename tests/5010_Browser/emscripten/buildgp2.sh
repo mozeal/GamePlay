@@ -7,10 +7,9 @@ echo "Building ${APPNAME}"
 mkdir -p ./build
 
 emcc \
-../../../GamePlay/src/Mesh.cpp \
-../../../GamePlay/src/MeshBatch.cpp \
-../../../GamePlay/src/Sprite.cpp \
-../../../GamePlay/src/SpriteBatch.cpp \
+../../../GamePlay/src/Form.cpp \
+../../../GamePlay/src/TextBox.cpp \
+../../../GamePlay/src/Platform.cpp \
 ../../../GamePlay/src/PlatformEmscripten.cpp \
 -I../../../GamePlay/src \
 -I../../../external-deps/include \
