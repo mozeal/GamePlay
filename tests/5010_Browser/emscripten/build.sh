@@ -49,7 +49,7 @@ emcc \
 -Wno-inconsistent-missing-override \
 -Wno-unused-value \
 -s USE_FREETYPE=1 -s USE_BULLET=1 -s USE_VORBIS=1 -s USE_LIBPNG=1 \
--s TOTAL_MEMORY=33554432 \
+-s TOTAL_MEMORY=134217728 \
 -s ALLOW_MEMORY_GROWTH=1 \
 -s BINARYEN=1 \
 -s BINARYEN_ASYNC_COMPILATION=1 \
