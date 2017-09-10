@@ -30,6 +30,9 @@ AudioSource::~AudioSource()
 {
     if (_alSource)
     {
+#ifdef EMSCRIPTEN
+        stop();
+#endif
         // Remove the source from the controller's set of currently playing sources
         // regardless of the source's state. E.g. when the AudioController::pause is called
         // all sources are paused but still remain in controller's set of currently 

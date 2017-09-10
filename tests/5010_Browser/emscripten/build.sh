@@ -7,6 +7,7 @@ mkdir -p ./build
 emcc \
 ../src/SamplesGame.cpp \
 ../src/Sample.cpp \
+../src/Grid.cpp \
 ../src/TriangleSample.cpp \
 ../src/MeshPrimitiveSample.cpp \
 ../src/MeshBatchSample.cpp \
@@ -28,6 +29,8 @@ emcc \
 ../src/InputSample.cpp \
 ../src/GestureSample.cpp \
 ../src/GamepadSample.cpp \
+../src/AudioSample.cpp \
+../src/Audio3DSample.cpp \
 ./build/_gameplay.bc \
 ./build/_gameplay2.bc \
 ./build/_lua.bc \
