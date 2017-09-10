@@ -23,7 +23,11 @@ emcc \
 ../src/PhysicsCollisionObjectSample.cpp \
 ../src/FirstPersonCamera.cpp \
 ../src/BillboardSample.cpp \
+../src/TerrainSample.cpp \
 ../src/WaterSample.cpp \
+../src/InputSample.cpp \
+../src/GestureSample.cpp \
+../src/GamepadSample.cpp \
 ./build/_gameplay.bc \
 ./build/_gameplay2.bc \
 ./build/_lua.bc \

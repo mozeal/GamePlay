@@ -889,8 +889,13 @@ bool ParticlesSample::mouseEvent(Mouse::MouseEvent evt, int x, int y, int wheelD
         }
         else if (_rotating)
         {
-            _cameraParent->rotateY(-MATH_DEG_TO_RAD((float)x * ROTATE_SENSITIVITY));
-            _cameraParent->rotateX(-MATH_DEG_TO_RAD((float)y * ROTATE_SENSITIVITY));
+            int deltaX = x - _prevX;
+            int deltaY = y - _prevY;
+            _prevX = x;
+            _prevY = y;
+            
+            _cameraParent->rotateY(-MATH_DEG_TO_RAD((float)deltaX * ROTATE_SENSITIVITY));
+            _cameraParent->rotateX(-MATH_DEG_TO_RAD((float)deltaY * ROTATE_SENSITIVITY));
             return true;
         }
         else if (_zooming)

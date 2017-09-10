@@ -39,7 +39,7 @@ emcc \
 ../../../GamePlay/src/FileSystem.cpp \
 ../../../GamePlay/src/FlowLayout.cpp \
 ../../../GamePlay/src/Font.cpp \
-../../../GamePlay/src/FrameBuffer.cpp \
+../../../GamePlay/src/Form.cpp \
 ../../../GamePlay/src/Frustum.cpp \
 ../../../GamePlay/src/Game.cpp \
 ../../../GamePlay/src/Gamepad.cpp \
@@ -100,6 +100,7 @@ emcc \
 ../../../GamePlay/src/Terrain.cpp \
 ../../../GamePlay/src/TerrainPatch.cpp \
 ../../../GamePlay/src/Text.cpp \
+../../../GamePlay/src/TextBox.cpp \
 ../../../GamePlay/src/Texture.cpp \
 ../../../GamePlay/src/Theme.cpp \
 ../../../GamePlay/src/ThemeStyle.cpp \
