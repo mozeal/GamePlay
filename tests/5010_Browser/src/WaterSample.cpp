@@ -289,13 +289,8 @@ bool WaterSample::mouseEvent(Mouse::MouseEvent evt, int x, int y, int wheelDelta
     {
     case Mouse::MOUSE_MOVE:
     {
-        int deltaX = x - _prevX;
-        int deltaY = y - _prevY;
-        _prevX = x;
-        _prevY = y;
-        
-        float xMovement = MATH_DEG_TO_RAD(-deltaX * MOUSE_SPEED);
-        float yMovement = MATH_DEG_TO_RAD(-deltaY * MOUSE_SPEED);
+        float xMovement = MATH_DEG_TO_RAD(-x * MOUSE_SPEED);
+        float yMovement = MATH_DEG_TO_RAD(-y * MOUSE_SPEED);
         _cameraNode->rotateY(xMovement);
         _cameraNode->getFirstChild()->rotateX(yMovement);
         _reflectCameraNode->rotateY(xMovement);

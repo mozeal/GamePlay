@@ -94,6 +94,8 @@ static EGLContext __eglContext = EGL_NO_CONTEXT;
 static EGLSurface __eglSurface = EGL_NO_SURFACE;
 static EGLConfig __eglConfig = 0;
 static const char* __glExtensions;
+static int prevX = 0;
+static int prevY = 0;
 PFNGLBINDVERTEXARRAYOESPROC glBindVertexArray = NULL;
 PFNGLDELETEVERTEXARRAYSOESPROC glDeleteVertexArrays = NULL;
 PFNGLGENVERTEXARRAYSOESPROC glGenVertexArrays = NULL;
@@ -877,15 +879,23 @@ namespace gameplay
         }
         if (eventType == EMSCRIPTEN_EVENT_MOUSEMOVE && (e->movementX != 0 || e->movementY != 0))
         {
-            __mouseCapturePointX = x;
-            __mouseCapturePointY = y;
+            if( __mouseCaptured ) {
+                __mouseCapturePointX = x - prevX;
+                __mouseCapturePointY = y - prevY;
+                prevX = x;
+                prevY = y;
+            }
+            else {
+                __mouseCapturePointX = x;
+                __mouseCapturePointY = y;
+            }
             
-            eventConsumed = gameplay::Platform::mouseEventInternal(gameplay::Mouse::MOUSE_MOVE, x, y, 0);
+            eventConsumed = gameplay::Platform::mouseEventInternal(gameplay::Mouse::MOUSE_MOVE, __mouseCapturePointX, __mouseCapturePointY, 0);
             if (!eventConsumed && e->button == 0)
             {
                 if (__leftMouseButtonPressed)
                 {
-                    gameplay::Platform::touchEventInternal(gameplay::Touch::TOUCH_MOVE, x, y, 0, true);
+                    gameplay::Platform::touchEventInternal(gameplay::Touch::TOUCH_MOVE, __mouseCapturePointX, __mouseCapturePointY, 0, true);
                 }
             }
         }
@@ -1175,6 +1185,28 @@ namespace gameplay
     
     void Platform::setMouseCaptured(bool captured)
     {
+        if (captured != __mouseCaptured)
+        {
+            if (captured)
+            {
+                // Hide the cursor and warp it to the center of the screen
+                prevX = __mouseCapturePointX;
+                prevY = __mouseCapturePointY;
+                __mouseCapturePointX = getDisplayWidth() / 2;
+                __mouseCapturePointY = getDisplayHeight() / 2;
+                
+                setCursorVisible(false);
+                //XWarpPointer(__display, None, __window, 0, 0, 0, 0, __mouseCapturePointX, __mouseCapturePointY);
+            }
+            else
+            {
+                // Restore cursor
+                //XWarpPointer(__display, None, __window, 0, 0, 0, 0, __mouseCapturePointX, __mouseCapturePointY);
+                setCursorVisible(true);
+            }
+            
+            __mouseCaptured = captured;
+        }
     }
     
     bool Platform::isMouseCaptured()

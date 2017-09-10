@@ -488,6 +488,7 @@
 		3870F07A1F647A6B00B45BC4 /* FormsSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormsSample.h; sourceTree = "<group>"; };
 		3870F07B1F647A6B00B45BC4 /* SpriteBatchSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteBatchSample.h; sourceTree = "<group>"; };
 		3870F07C1F647A6B00B45BC4 /* Sample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sample.h; sourceTree = "<group>"; };
+		3870F0971F65C21500B45BC4 /* PlatformLinux.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlatformLinux.cpp; path = ../../../gameplay/src/PlatformLinux.cpp; sourceTree = "<group>"; };
 		42049B5216ADBB61005DD1F9 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
 		42049B5316ADBB61005DD1F9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		42049B5416ADBB61005DD1F9 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/OpenAL.framework; sourceTree = DEVELOPER_DIR; };
@@ -716,6 +717,7 @@
 				38485C0F1F5FD8B20045104A /* Platform.cpp */,
 				38485BD61F5FD8AB0045104A /* Platform.h */,
 				38485BBD1F5FD8A80045104A /* PlatformiOS.mm */,
+				3870F0971F65C21500B45BC4 /* PlatformLinux.cpp */,
 				3870F01D1F641ADA00B45BC4 /* PlatformEmscripten.cpp */,
 				38485B2F1F5FD8970045104A /* PlatformMacOSX.mm */,
 				38485B761F5FD89F0045104A /* Properties.cpp */,
