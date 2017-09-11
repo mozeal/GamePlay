@@ -99,7 +99,7 @@ static int prevY = 0;
 PFNGLBINDVERTEXARRAYOESPROC glBindVertexArray = NULL;
 PFNGLDELETEVERTEXARRAYSOESPROC glDeleteVertexArrays = NULL;
 PFNGLGENVERTEXARRAYSOESPROC glGenVertexArrays = NULL;
-PFNGLISVERTEXARRAYOESPROC glIsVertexArray = NULL;
+//PFNGLISVERTEXARRAYOESPROC glIsVertexArray = NULL;
 //PFNGLMAPBUFFEROESPROC glMapBuffer = NULL;
 //PFNGLUNMAPBUFFEROESPROC glUnmapBuffer = NULL;
 static int __windowSize[2];
@@ -787,14 +787,14 @@ namespace gameplay
             glBindVertexArray = (PFNGLBINDVERTEXARRAYOESPROC)eglGetProcAddress("glBindVertexArrayOES");
             glDeleteVertexArrays = (PFNGLDELETEVERTEXARRAYSOESPROC)eglGetProcAddress("glDeleteVertexArraysOES");
             glGenVertexArrays = (PFNGLGENVERTEXARRAYSOESPROC)eglGetProcAddress("glGenVertexArraysOES");
-            glIsVertexArray = (PFNGLISVERTEXARRAYOESPROC)eglGetProcAddress("glIsVertexArrayOES");
+            //glIsVertexArray = (PFNGLISVERTEXARRAYOESPROC)eglGetProcAddress("glIsVertexArrayOES");
             //glMapBuffer = (PFNGLMAPBUFFEROESPROC)eglGetProcAddress("glMapBuffer");
             //glUnmapBuffer = (PFNGLUNMAPBUFFEROESPROC)eglGetProcAddress("glUnmapBuffer");
         }
         GP_ASSERT(glBindVertexArray);
         GP_ASSERT(glDeleteVertexArrays);
         GP_ASSERT(glGenVertexArrays);
-        GP_ASSERT(glIsVertexArray);
+        //GP_ASSERT(glIsVertexArray);
         //GP_ASSERT(glMapBuffer);
         //GP_ASSERT(glUnmapBuffer);
 

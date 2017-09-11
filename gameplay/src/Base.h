@@ -272,7 +272,7 @@ using std::va_list;
     extern PFNGLBINDVERTEXARRAYOESPROC glBindVertexArray;
     extern PFNGLDELETEVERTEXARRAYSOESPROC glDeleteVertexArrays;
     extern PFNGLGENVERTEXARRAYSOESPROC glGenVertexArrays;
-    extern PFNGLISVERTEXARRAYOESPROC glIsVertexArray;
+    //extern PFNGLISVERTEXARRAYOESPROC glIsVertexArray;
     //extern PFNGLMAPBUFFEROESPROC glMapBuffer;
     //extern PFNGLUNMAPBUFFEROESPROC glUnmapBuffer;
     #define GL_WRITE_ONLY GL_WRITE_ONLY_OES

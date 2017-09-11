@@ -1,0 +1,10 @@
+audio backgroundTrack
+{
+    path = res/background.ogg
+    looped = true
+}
+
+audio spaceship
+{
+    path = res/spaceship.wav
+}

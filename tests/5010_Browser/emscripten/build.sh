@@ -31,9 +31,11 @@ emcc \
 ../src/GamepadSample.cpp \
 ../src/AudioSample.cpp \
 ../src/Audio3DSample.cpp \
+../src/FirstPersonCamera.cpp \
 ./build/_gameplay.bc \
 ./build/_gameplay2.bc \
 ./build/_lua.bc \
+./build/_luabind.bc \
 -I../src/common \
 -I../../../GamePlay/src \
 -I../../../external-deps/include \
